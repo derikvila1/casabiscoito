@@ -59,7 +59,7 @@
 				</div>
                 <div class="row mt-4 d-print-none">
 					<div class="col-md-12">
-                        <form action="/agendamento/fabrica/create" method="POST">
+                        <form action="/agendamento/casabiscoito/create" method="POST">
                             @csrf
 							<div class="row">
 								

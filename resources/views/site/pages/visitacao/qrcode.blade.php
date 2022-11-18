@@ -209,7 +209,7 @@
 
             <div id="infos-visitante-visitacao">
                 <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->nome_completo }}</b> </p>
-                <p id="label-documento-comprovante"><b>Deficiência: {{ $visitante_cadastrato->deficiencia ?? ''}}</b> </p>
+                <p id="label-documento-comprovante"><b>Deficiência: {{ $visitante_cadastrato->nome_deficiencia ?? ''}}</b> </p>
             </div>
             <hr>
             <div id="infos-visitante-visitacao">
@@ -220,8 +220,15 @@
             <div id="infos-visitante-visitacao">
                 <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->dependente2_nome }}</b> </p>
                 <p id="label-documento-comprovante"><b>Data Nascimento: {{ $visitante_cadastrato->dependente2_data_nascimento ?? ''}}</b> </p>
-                
-            </div>
+             </div>
+             <div id="infos-visitante-visitacao">
+                <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->dependente3_nome }}</b> </p>
+                <p id="label-documento-comprovante"><b>Data Nascimento: {{ $visitante_cadastrato->dependente3_data_nascimento ?? ''}}</b> </p>
+             </div>
+             <div id="infos-visitante-visitacao">
+                <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->dependente4_nome }}</b> </p>
+                <p id="label-documento-comprovante"><b>Data Nascimento: {{ $visitante_cadastrato->dependente4_data_nascimento ?? ''}}</b> </p>
+             </div>
         </div>
         <div id="observacoes-importantes">
             <h1 class="ui header" id="texto-title">INFORMAÇÕES AO VISITANTE</h1>
