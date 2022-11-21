@@ -1,7 +1,7 @@
 	
 @extends('adminlte::page')
 
-@section('title', 'Fábrica do Papai Noel 2021')
+@section('title', 'Casa do Biscoito 2022')
 
 @section('content_header')
 <h1>Inscritos para a Casa do Biscoito - 
