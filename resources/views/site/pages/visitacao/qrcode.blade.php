@@ -35,7 +35,7 @@
 
         #texto-comprovacao {
             color: rgb(73, 110, 98);
-            font-size: 21px;
+            font-size: 15px;
             margin-top: -10px;
         }
 
@@ -81,29 +81,32 @@
         }
 
         #infos-espaco-visitacao {
-            padding-top: 15px;
+          
             color: rgb(45, 71, 63);
         }
 
         #texto-title {
             color: rgb(73, 110, 98);
             font-size: 21px;
+            margin-top: 0;
+    margin-bottom: 0;
         }
-
+/* 
         #infos-visitante {
             padding-right: 60px;
             padding-top: 30px;
             padding-left: 60px;
-        }
+        } */
 
         #label-documento-comprovante {
-            font-size: 15px;
+            font-size: 13px;
             color: rgb(70, 97, 89);
             line-height: 22px;
         }
 
         #label-nome-comprovante {
             font-size: 15px;
+            margin-bottom:0px;
         }
 
         #label-contato-comprovante {
@@ -116,17 +119,17 @@
 
         #infos-visitante-visitacao {
             color: rgb(45, 71, 63);
-            padding-top: 15px;
+        
         }
 
         #observacoes-importantes {
             padding-right: 60px;
             padding-left: 60px;
-            padding-top: 30px;
+          
         }
 
         #div-importantes-observacoes {
-            padding-top: 18px;
+          
             color: rgb(45, 71, 63);
         }
 
@@ -141,7 +144,7 @@
 
         #infos-visitante-dependente-visitacao {
             color: rgb(45, 71, 63);
-            padding-top: 15px;
+          
         }
 
     </style>
@@ -152,37 +155,32 @@
         <center style="padding-top: 16px">
             <button type="button" onclick="imprimir()">Imprimir comprovante</button>
         </center>
-        <div id="div-principal" align=center>
-            <img src="https://eventos.cultura.am.gov.br/logo-christmas.png" width="130px" style="margin-top: -30px;">
-            <img src="https://eventos.cultura.am.gov.br/logo-1.png" width="75px" style="margin-top: -30px;">
-            <div style="margin: auto; text-align: center;">
-                <img src="https://eventos.cultura.am.gov.br/subtitle.png" width="330px" style="text-align: center;">
+        <div style="display:flex" id="div-principal" align=center>
+            <div>
+                <img src="https://eventos.cultura.am.gov.br/logo-christmas.png" width="130px" style="margin-top: -30px;">
+                <img src="https://eventos.cultura.am.gov.br/logo-1.png" width="75px" style="margin-top: -30px;">
+                <div style="margin: auto; text-align: center;">
+                    <img src="https://eventos.cultura.am.gov.br/subtitle.png" width="330px" style="text-align: center;">
+                </div>
             </div>
-            <h1 class="ui header" style="color: rgb(60, 145, 202); font-size: 16px;">COMPROVANTE DE INSCRIÇÃO</h1><br>
-            <h1 class="ui header" style="color: rgb(60, 145, 202); font-size: 16px;">ESTAÇÃO CASA DO BISCOITO</h1>
+                
+            <div>
+                <h1 class="ui header" style="color: rgb(60, 145, 202); font-size: 14px;">COMPROVANTE DE INSCRIÇÃO</h1>
+                <h1 class="ui header" style="color: rgb(60, 145, 202); font-size: 14px;">ESTAÇÃO CASA DO BISCOITO</h1>
 
-            {{-- <p id="descricao-page-comprovante-text" style="color: rgb(60, 145, 202);"></p>
-            <h1 class="ui header" id="texto-comprovacao"></h1> --}}
+                {{-- <p id="descricao-page-comprovante-text" style="color: rgb(60, 145, 202);"></p>
+                <h1 class="ui header" id="texto-comprovacao"></h1> --}}
 
-            <h1 class="ui header" id="texto-comprovacao">Inscrição realizada para
-                {{$row->horario_visitacao_data}} -  {{$row->horario_visitacao_hora_inicio}} 
-            </h1>
-            {{-- <h1 class="ui header" id="texto-comprovacao">
-                Importante! Chegar com antecedência na estação, <br> neste horário: 
-               <b>{{$row->horario_visitacao_hora_chegada_estacao}}</b>  
-            </h1> --}}
-            <center style="padding-top: 16px">
-                <button type="button" onclick="imprimir()">Imprimir comprovante</button>
-            </center>
-            <img src="https://chart.googleapis.com/chart?cht=qr&chs=500x500&chl='{{$code}}'">
-         
-            <div style="max-width: 500px;">
-               
-                <p id="descricao-page-comprovante-text"
-                    style="padding-top: 15px; padding-bottom: 15px; font-size: 20px important!;">Salve este
-                    comprovante, você vai precisar apresentar (impresso ou na tela do celular) na entrada do evento
-                    junto com o documento de
-                    identificação cadastrado.</p>
+                <h1 class="ui header" id="texto-comprovacao">Inscrição realizada para
+                    {{$row->horario_visitacao_data}} -  {{$row->horario_visitacao_hora_inicio}} 
+                </h1>
+                {{-- <h1 class="ui header" id="texto-comprovacao">
+                    Importante! Chegar com antecedência na estação, <br> neste horário: 
+                <b>{{$row->horario_visitacao_hora_chegada_estacao}}</b>  
+                </h1> --}}
+                
+                <h1 class="ui header" id="texto-comprovacao">Endereço: Rua José Clemente - 564, esquina com a Rua Barroso
+                </h1>
             </div>
         </div>
 
@@ -207,43 +205,55 @@
             <h1 class="ui header" id="texto-title">Informações do Inscrito</h1>
             <div class="divider div-transparent"></div>
 
-            <div id="infos-visitante-visitacao">
-                <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->nome_completo }}</b> </p>
-                <p id="label-documento-comprovante"><b>Deficiência: {{ $visitante_cadastrato->nome_deficiencia ?? ''}}</b> </p>
-            </div>
-            <hr>
-            <div id="infos-visitante-visitacao">
-                <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->dependente_nome }}</b> </p>
-                <p id="label-documento-comprovante"><b>Data Nascimento: {{ $visitante_cadastrato->dependente_data_nascimento ?? ''}}</b> </p>
+
+            <div style="display: flex">
+
+          
+                <div id="infos-visitante-visitacao">
+                    <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->nome_completo }}</b> </p>
+                    <p id="label-documento-comprovante"><b>Deficiência: {{ $visitante_cadastrato->nome_deficiencia ?? ''}}</b> </p>
+            
+                    <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->dependente_nome }}</b> </p>
+                    <p id="label-documento-comprovante"><b>Data Nascimento: {{ $visitante_cadastrato->dependente_data_nascimento ?? ''}}</b> </p>
+            
+                    <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->dependente2_nome }}</b> </p>
+                    <p id="label-documento-comprovante"><b>Data Nascimento: {{ $visitante_cadastrato->dependente2_data_nascimento ?? ''}}</b> </p>
+            
+                    <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->dependente3_nome }}</b> </p>
+                    <p id="label-documento-comprovante"><b>Data Nascimento: {{ $visitante_cadastrato->dependente3_data_nascimento ?? ''}}</b> </p>
                 
-            </div>
-            <div id="infos-visitante-visitacao">
-                <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->dependente2_nome }}</b> </p>
-                <p id="label-documento-comprovante"><b>Data Nascimento: {{ $visitante_cadastrato->dependente2_data_nascimento ?? ''}}</b> </p>
+                    <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->dependente4_nome }}</b> </p>
+                    <p id="label-documento-comprovante"><b>Data Nascimento: {{ $visitante_cadastrato->dependente4_data_nascimento ?? ''}}</b> </p>
+                </div>
+
+                <div style="margin-left:255px">
+                    <img style="margin-left:40px"  src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl='{{$code}}'">
+                    
+                    <div style="max-width: 320px;">
+                        
+                        <p id="descricao-page-comprovante-text"
+                            style="margin-left:50px; font-size: 13px important!;">Salve este
+                            comprovante, você vai precisar apresentar (impresso ou na tela do celular) na entrada do evento
+                            junto com o documento de
+                            identificação cadastrado.</p>
+                    </div>
+                </div>
              </div>
-             <div id="infos-visitante-visitacao">
-                <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->dependente3_nome }}</b> </p>
-                <p id="label-documento-comprovante"><b>Data Nascimento: {{ $visitante_cadastrato->dependente3_data_nascimento ?? ''}}</b> </p>
-             </div>
-             <div id="infos-visitante-visitacao">
-                <p id="label-nome-comprovante"><b>Nome: {{ $visitante_cadastrato->dependente4_nome }}</b> </p>
-                <p id="label-documento-comprovante"><b>Data Nascimento: {{ $visitante_cadastrato->dependente4_data_nascimento ?? ''}}</b> </p>
-             </div>
+
         </div>
+
+
+
+        
         <div id="observacoes-importantes">
             <h1 class="ui header" id="texto-title">INFORMAÇÕES AO VISITANTE</h1>
             <div class="divider div-transparent"></div>
             <div id="div-importantes-observacoes">
                 <b>
-                    <p id="label-documento-comprovante"> ● O local de encontro para iniciar a visitação será na Estação da 
-                        Fábrica do Papai Noel, localizada no Palácio da Justiça do Amazonas (prédio amarelo) atrás do Teatro Amazonas,
-                        Av. Eduardo Ribeiro com a rua 10 de Julho.
-                        A Estação da Fábrica se encontra devidamente sinalizada e será o ponto de partida da visitação;</p>
+                 
 
                     <p id="label-documento-comprovante"> ● É necessário chegar com 20 minutos de antecedência no local citado acima;</p>
 
-                    <p id="label-documento-comprovante"> ● Ao chegar no local de encontro (Estação da Fábrica), os visitantes deverão apresentar
-                         o comprovante do agendamento para realizar a visitação na Fábrica;</p>
 
                     <p id="label-documento-comprovante"> ● A entrada do público será feita no horário marcado do agendamento. Não haverá tolerância no horário de chegada. 
                         Após o tempo expirado, será necessário realizar novo agendamento;</p>
@@ -251,40 +261,23 @@
                     <p id="label-documento-comprovante"> ● O comprovante de agendamento só é válido para o dia e horário presentes no mesmo, não sendo permitido a 
                         utilização dele em dias e horários diferentes;</p>
 
-                    <p id="label-documento-comprovante"> ● De acordo com o Decreto do Governo do Estado do Amazonas Nº
-                            44.581 de 22 DE SETEMBRO DE 2021, é obrigatória a apresentação do cartão de vacinação da
-                            COVID-19, com o ciclo de vacinação completo - dose única ou as duas doses, tanto para visitantes
-                            brasileiros quanto para estrangeiros, exceto menores de idade que ainda não estejam contemplados
-                            na faixa etária de vacinação;</p>
-
                     <p id="label-documento-comprovante"> ● Eu AUTORIZO a Secretaria de Estado de Cultura e Economia Criativa do Amazonas a utilizar a imagem do menor feita 
-                        para o crachá de ajudante do Papai Noel, assim como as demais imagens capturadas durante a visita à Fábrica do Papai Noel, em todo e 
+                        para o passaporte de Natal, assim como as demais imagens capturadas durante a visita, em todo e 
                         qualquer material entre imagens de vídeo, fotos e voz. A presente autorização é concedida a título gratuito, abrangendo o uso da imagem 
                         acima mencionada, das seguintes formas: folhetos em geral, anúncios em revistas,  jornais e TV; sites e portais; e redes sociais 
                         (facebook, instagram, twitter, youtube e demais plataformas digitais de streaming e compartilhamento de dados).</p>
 
                     <h1 class="ui header" id="texto-title">ATENÇÃO:</h1>
-                    <p id="label-documento-comprovante"> ● Caso não haja a apresentação do cartão de vacinação, o visitante não poderá realizar a visitação;</p>
+                    <p id="label-documento-comprovante"> ● Informamos que o espaço desenvolverá atividades voltadas para o público de 1 a 5 anos, como
+                            oficinas, brincadeiras e apresentações artísticas. Durante 50 minutos as crianças serão acompanhadas
+                            pelos recreadores nas atividades e o responsável pelo menor, deverá permanecer no espaço durante
+                            a realização da ação. </p>
                     
-                    <p id="label-documento-comprovante"> ● Será proibida a entrada de visitantes com sintomas de gripe e
-                        febre;</p>
-                    <p id="label-documento-comprovante"> ● O uso de máscara é obrigatório na entrada e durante a visita turística assim como para 
-                        realização de registros fotográficos.</p>
-
-                    <p id="label-documento-comprovante"> ● Será estipulado o número de até 20 (vinte) visitantes (entre adultos e crianças) por horário de visitação, 
-                            com duração média de até 30 minutos cada.</p>
-                    <p id="label-documento-comprovante"> ● É terminantemente proibido o visitante (adulto ou criança) se dispersar do grupo, uma vez que todas 
-                                as visitas serão mediadas por um condutor cultural.</p>
+                    
             </div>
         </div>
     </div>
-    <center style="padding-top: 16px">
-        <button type="button" onclick="imprimir()">Imprimir comprovante</button>
-    </center>
-    <footer style="margin: auto; text-align: center;">
-        <img src="https://eventos.cultura.am.gov.br/Cartela-natal-100.jpg"
-            style="width: 100%; padding: 30px; max-width: 900px;">
-    </footer>
+
     <script>
         function imprimir(){
             window.print();
