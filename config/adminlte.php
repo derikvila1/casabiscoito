@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Fabrica</b>Papai Noel 2021',
+    'logo' => 'Casa do Biscoito 2022',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -256,7 +256,7 @@ return [
         ['header' => 'MENU'],
         [
             'text' => 'Agendamento',
-            'url'  => 'agendamento/fabrica',
+            'url'  => 'agendamento/casabiscoito',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
