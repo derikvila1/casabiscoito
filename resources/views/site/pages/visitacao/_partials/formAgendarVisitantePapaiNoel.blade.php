@@ -128,7 +128,8 @@
                                 <div class="col-md-12">
                                     <button type="button" onclick="addDep()"
 									class="btn btn-success" 
-									id="btn_dependentes">Dependentes ?</button>
+									id="btn_dependentes">Adicionar dependente</button>
+									
                                 </div>
                             </div>
 							<br>
