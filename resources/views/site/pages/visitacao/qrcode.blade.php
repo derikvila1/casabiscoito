@@ -242,11 +242,11 @@
             <div class="column-1">
                 <div class="logos-imgs">
 
-                    <div class="img-natal-1" style="margin: auto; text-align: center;"><img src="/logonatalpng.png"
+                    <div class="img-natal-1" style="margin: auto; text-align: center;"><img src="\logonatalpng.png"
                             style="width: 90%; max-width: 200px; text-align: center; margin-top: 20px;"></div>
 
                     <div class="img-biscoito-cell" style="margin: auto; text-align: center;"><img
-                            src="/logo-casa-do-biscoito-2-2.png"
+                            src="\logo-casa-do-biscoito-2-2.png"
                             style="width: 90%; max-width: 250px; text-align: center;">
                     </div>
                 </div>
