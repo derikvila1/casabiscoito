@@ -26,3 +26,8 @@ Route::get('listagem',                    [AgendamentoVisitacaoController::class
 Route::get('listagem/inscritos/{id}',     [AgendamentoVisitacaoController::class, 'listagemInscritos']);
 Route::get('pdf/{id}',                    [AgendamentoVisitacaoController::class, 'listagemPDF']);
 
+Route::get('consulta',        [AgendamentoVisitacaoController::class, 'consulta']);
+
+Route::get('reprint',        [AgendamentoVisitacaoController::class, 'reprint']);
+
+Route::get('reprint2', [AgendamentoVisitacaoController::class, 'reprint2']);

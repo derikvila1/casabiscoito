@@ -127,6 +127,29 @@ class AgendamentoVisitacaoController extends Controller
         }
     }
 
+    public function reprint(Request $request){
+        $cpf= $request->cpf;
+        $visitante_cadastrato = AgendamentoVisitacao::where('cpf', $cpf)->get();
+        return view('site.pages.visitacao.reprint3', compact('visitante_cadastrato'));
+    }
+
+    public function consulta(){
+        return view('site.pages.visitacao.consulta');
+    }
+
+    public function reprint2 (Request $request){
+
+        $code= "secretariadecultura156216";
+        $cpf = $request->cpf;
+        $index = $request->index;
+        $visitante_cadastrato = AgendamentoVisitacao::where('cpf', $cpf)->get();
+        $visitante_cadastrato = $visitante_cadastrato[$index];
+       
+        $row = HorariosVisitacao::where('id', $visitante_cadastrato->horario_visitacao_id)->first();
+     
+        return view('site.pages.visitacao.qrcode', compact('visitante_cadastrato', 'code', 'row',));
+    }
+
     public function listagem(){
         $visitantes = $this->repository->all();
         $horarios = $this->horarios_visitacao->where("id",'>',"324" )->get();
