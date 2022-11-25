@@ -48,11 +48,16 @@
 					</div>
 				</div> -->
 				<div class="col-md-12">
-					<div class="py-5 text-center">
+
+				<div class="py-5 text-center">
 						<h2>AGENDAMENTO ESGOTADO</h2>
 						<p class="lead pt-2">
 							Por favor aguarde a abertura de novas vagas.
                         </p>
+					</div>
+					<div class="py-2 text-center">
+						<h2>REIMPRESSÃO DE COMPROVANTE</h2>
+						<a href="\consulta">Clique aqui</a>
 					</div>
 				</div>
 
