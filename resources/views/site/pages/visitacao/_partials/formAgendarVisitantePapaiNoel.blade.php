@@ -46,9 +46,10 @@
 							Faça seu agendamento para a Casa do Biscoito.
                         </p>
 						<h3 style="color:red; ">ATENÇÃO! Atividade voltada para crianças de 1 a 5 anos, com acompanhamento de responsável.</h3>
+						
 						<div class="py-2 text-center">
-						<h5>REIMPRESSÃO DE COMPROVANTE</h5>
-						<a href="\consulta">Clique aqui!</a>
+							<h5>REIMPRESSÃO DE COMPROVANTE</h5>
+							<a href="\consulta">Clique aqui!</a>
 						</div>
 					</div>
 				</div>
