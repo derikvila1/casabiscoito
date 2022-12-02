@@ -38,7 +38,7 @@
                             src="\logo-casa-do-biscoito-2-2.png"
                             style="width: 90%; max-width: 250px; text-align: center;">
 			</div>
-			
+			<!--
 				<div class="col-md-12">
 					<div class="py-5 text-center">
 						<h2>Bem vindo</h2>
@@ -53,7 +53,9 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="col-md-12">
+                
+                -->
+				 <div class="col-md-12">
 
 					<div class="py-5 text-center">
 						<h3>AGENDAMENTO DA SEMANA ESGOTADO</h3>
@@ -69,11 +71,13 @@
 						<h5>REIMPRESSÃO DE COMPROVANTE</h5>
 						<a href="\consulta">Clique aqui!</a>
 					</div>
-				</div> -->
+				</div> 
 
 			</div>
 		</header>
         <main class="visitante d-print-none">
+        
+        <!--
 			<section class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -275,6 +279,9 @@
 			</section>
 		</main>
     </form> {{-- fim formulario principal--}}
+    
+    
+    -->
         <footer class="my-5 pt-5 text-muted text-center text-small d-print-none">
 			<p class="mb-1">Secretaria de Cultura e Economia Criativa</p>
 			<p class="mb-1">Desenvolvimento: Inovação e Tecnologia Audivisual</p>
