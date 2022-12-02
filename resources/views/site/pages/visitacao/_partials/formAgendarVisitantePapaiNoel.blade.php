@@ -72,7 +72,7 @@
 
 			</div>
 		</header>
-        <!-- <main class="visitante d-print-none">
+        <main class="visitante d-print-none">
 			<section class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -273,7 +273,7 @@
 				</div>
 			</section>
 		</main>
-    </form> {{-- fim formulario principal--}} -->
+    </form> {{-- fim formulario principal--}}
         <footer class="my-5 pt-5 text-muted text-center text-small d-print-none">
 			<p class="mb-1">Secretaria de Cultura e Economia Criativa</p>
 			<p class="mb-1">Desenvolvimento: Inovação e Tecnologia Audivisual</p>
