@@ -39,7 +39,7 @@
                             style="width: 90%; max-width: 250px; text-align: center;">
 			</div>
 			
-				<div class="col-md-12">
+				<!-- <div class="col-md-12">
 					<div class="py-5 text-center">
 						<h2>Bem vindo</h2>
 						<p class="lead pt-2">
@@ -52,11 +52,11 @@
 							<a href="\consulta">Clique aqui!</a>
 						</div>
 					</div>
-				</div>
+				</div> -->
                 
                
 				
-				 <!-- <div class="col-md-12">
+				 <div class="col-md-12">
 
 					<div class="py-5 text-center">
 						<h3>AGENDAMENTO DA SEMANA ESGOTADO</h3>
@@ -73,14 +73,14 @@
 						<h5>REIMPRESSÃO DE COMPROVANTE</h5>
 						<a href="\consulta">Clique aqui!</a>
 					</div>
-				</div>  -->
+				</div> 
 
 			</div>
 		</header>
         <main class="visitante d-print-none">
         
         
-			<section class="container">
+			<!-- <section class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<h4 class="mb-3">Visitante</h4>
@@ -281,7 +281,7 @@
 			</section>
 		</main>
     </form> {{-- fim formulario principal--}}
-    
+     -->
     
    
         <footer class="my-5 pt-5 text-muted text-center text-small d-print-none">
