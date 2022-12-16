@@ -59,10 +59,8 @@
 				 <div class="col-md-12">
 
 					<div class="py-5 text-center">
-						<h3>AGENDAMENTO DA SEMANA ESGOTADO</h3>
-						<p class="lead pt-2">
-							Abertura de novas vagas às sextas-feiras, a partir das 11h.
-                        </p>
+						
+						
 							<h3 style="color:red; ">ATENÇÃO! Atividade voltada para crianças de 1 a 5 anos, com acompanhamento de responsável.</h3>
 						
 						<P>
